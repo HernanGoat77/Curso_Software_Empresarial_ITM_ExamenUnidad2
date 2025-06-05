@@ -18,9 +18,7 @@ public class FestivoCliente {
     private RestTemplate restTemplate;
 
     public List<FestivoDTO> obtenerFestivosAño(String año) {
-        String url = "http://dockerapifestivos:3030/festivos/obtener/" + año;
-
-        // String url = "http://localhost:3030/festivos/obtener/" + año;
+        String url = "http://localhost:3030/festivos/obtener/" + año;
 
         ResponseEntity<List<FestivoDTO>> response = restTemplate.exchange(url, HttpMethod.GET, null,
                 new ParameterizedTypeReference<List<FestivoDTO>>() {
